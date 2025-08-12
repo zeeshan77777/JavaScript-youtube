@@ -23,3 +23,39 @@ const myFunction = function(){
 }
 
 //every non-primitive datatypes has a type of object but function has a type of object funtion
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Memory
+
+//there are two types of memory stack and heap
+
+//stack  //All primitive datatypes are stored in stack
+
+let number1 = 24
+let number2 = number1
+
+number2 = 45
+
+console.log(number1);
+console.log(number2);  
+
+//only the value of the seocond variable is changed the first variable stays the same
+
+//Heap //all the non primitive datatypes are stored in heap
+
+let user1 = {
+    email: "zee@gmail.com",
+    password: 2222
+}
+
+let user2 = user1
+
+user2.password = 3333
+
+console.log(user1.password);
+console.log(user2.password);
+
+//value in both the variables is changed 
+
