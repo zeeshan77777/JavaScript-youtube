@@ -60,9 +60,9 @@ without knowing the backend details */
 
 //this is JSON format of an API Key
 {
-    "name": "Zee",
-    "id": 49,
-    "IsLogedIn": false
+    // "name": "Zee",
+    // "id": 49,
+    // "IsLogedIn": false
 }
 
 
