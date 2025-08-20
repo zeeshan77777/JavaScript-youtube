@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style = "background-color : #242424; color: white;">
+    
+</body>
+<script>
+    const element = document.createElement('h1')
+    console.log(element);
+    element.className= "heading"
+    element.id= Math.round(Math.random() * 10 + 1)
+    element.setAttribute("title", "first heading")
+    element.style.backgroundColor = "blue"
+    // element.innerText = "Heading"
+    const AddText =  document.createTextNode("Heading")
+    element.appendChild(AddText)
+    document.body.appendChild(element)
+</script>
+</html>

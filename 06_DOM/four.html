@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: #242424 ; color: #fff;">
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function AddList(list) {
+        const ListItem = document.createElement('li')
+        ListItem.innerText = `${list}`
+        document.querySelector('.languages').appendChild(ListItem)
+    }
+    AddList("python")
+    AddList("react JS")
+
+    //This is the Most Optimized way for adding an element
+    function OptimizeList(list) {
+        const ListItem = document.createElement('li');
+        ListItem.appendChild(document.createTextNode(list))
+        document.querySelector('.languages').appendChild(ListItem)
+    }
+    OptimizeList("Flutter")
+
+    //Edit An Element
+    const thirdElement = document.querySelector("li:nth-child(3)")
+    const item = document.createElement('li')
+    item.innerHTML = "JQuery"
+    thirdElement.replaceWith(item)
+
+    //Another Way Of Doing This
+    const firstitem = document.querySelector('li:first-child')
+    firstitem.outerHTML = "<li>MongoDB</li>"
+
+    //remove an element
+    const lastitem = document.querySelector('li:last-child')
+    lastitem.remove()
+</script>
+</html>
